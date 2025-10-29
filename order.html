@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qmanage - Order</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header (same as home for consistent UI) -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <span class="logo-q">Q</span>manage
+                </div>
+                <nav class="navigation">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <div class="dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">Cafe's</a>
+                        <div class="dropdown-content">
+                            <a href="order.html?cafe=Burger%20Singh">Burger Singh</a>
+                            <a href="order.html?cafe=Sketch">Sketch</a>
+                            <a href="order.html?cafe=Smoothie">Smoothie</a>
+                            <a href="order.html?cafe=Domino's">Domino's</a>
+                            <a href="order.html?cafe=Cafe%20Coffee%20Day">Cafe Coffee Day</a>
+                            <a href="order.html?cafe=Kathi%20Junction">Kathi Junction</a>
+                            <a href="order.html?cafe=Maggi%20Point">Maggi Point</a>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </nav>
+                <a class="signup-btn cart-btn" href="#" id="cartButton">
+                    <span class="user-icon">🛒</span>
+                    Cart
+                    <span class="cart-count" id="cartCount">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Order Page Top Banner -->
+    <section class="order-hero">
+        <div class="container">
+            <div class="order-hero-grid">
+                <div class="order-hero-left">
+                    <div class="order-hero-badge">⚡ Deal of the weekend</div>
+                    <h1 class="order-hero-title" id="cafeName">“Cafe Name”</h1>
+                    <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Cafe banner" class="order-hero-img">
+                </div>
+                <div class="order-hero-right">
+                    <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=600&h=400&fit=crop&crop=center" alt="Burger" class="promo-img">
+                    <div class="promo-card">
+                        <div class="promo-off">50 % off</div>
+                        <div class="promo-sub">The full price of burgers</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Categories -->
+    <section class="order-categories" id="categories">
+        <div class="container">
+            <h2 class="order-section-title">Menu category</h2>
+            <div class="order-categories-row" id="categoryRow"></div>
+        </div>
+    </section>
+
+    <!-- Items Grid -->
+    <section class="order-items" id="items">
+        <div class="container">
+            <div class="order-items-grid" id="itemsGrid"></div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo"><span class="logo-q">Q</span>manage</div>
+                    <p class="footer-address">BML Munjal University,NH-48,Haryana,India</p>
+                    <p class="footer-phone">+99999 99999</p>
+                    <p class="footer-email">info@qmanage.com</p>
+                    <p class="footer-copyright">© 2023 Qmanage. All Rights Reserved.</p>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-heading">About</h4>
+                    <ul class="footer-links">
+                        <li><a href="contact.html" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-heading">Menu</h4>
+                    <ul class="footer-links">
+                        <li><a href="order.html?cafe=Burger%20Singh" class="footer-link">Burger Singh</a></li>
+                        <li><a href="order.html?cafe=Sketch" class="footer-link">Sketch</a></li>
+                        <li><a href="order.html?cafe=Smoothie" class="footer-link">Smoothie</a></li>
+                        <li><a href="order.html?cafe=Domino's" class="footer-link">Domino's</a></li>
+                        <li><a href="order.html?cafe=Cafe%20Coffee%20Day" class="footer-link">Cafe Coffee Day</a></li>
+                        <li><a href="order.html?cafe=Kathi%20Junction" class="footer-link">Kathi Junction</a></li>
+                        <li><a href="order.html?cafe=Maggi%20Point" class="footer-link">Maggi Point</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-heading">Newsletter</h4>
+                    <p class="footer-newsletter-desc">Subscribe to our newsletter and get updates.</p>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Your email" class="newsletter-input">
+                        <button class="newsletter-btn">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-social">
+                <a href="#" class="social-link">Facebook</a>
+                <a href="#" class="social-link">Instagram</a>
+                <a href="#" class="social-link">X</a>
+                <a href="#" class="social-link">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3 class="cart-title">Your Cart</h3>
+            <button class="cart-close" id="cartClose">×</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <div class="cart-empty" id="cartEmpty">
+                <div class="empty-cart-icon">🛒</div>
+                <p>Your cart is empty</p>
+                <p>Add some delicious items to get started!</p>
+            </div>
+        </div>
+        <div class="cart-footer" id="cartFooter">
+            <div class="cart-total">
+                <span class="total-label">Total:</span>
+                <span class="total-amount" id="cartTotal">₹0.00</span>
+            </div>
+            <button class="checkout-btn" id="checkoutBtn">Place Order</button>
+        </div>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="js/utils.js"></script>
+    <script src="js/data-loader.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/order.js"></script>
+</body>
+</html>
+
+

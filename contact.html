@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qmanage - Contact Us</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <span class="logo-q">Q</span>manage
+                </div>
+                <nav class="navigation">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <div class="dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">Cafe's</a>
+                        <div class="dropdown-content">
+                            <a href="order.html?cafe=Burger%20Singh">Burger Singh</a>
+                            <a href="order.html?cafe=Sketch">Sketch</a>
+                            <a href="order.html?cafe=Smoothie">Smoothie</a>
+                            <a href="order.html?cafe=Domino's">Domino's</a>
+                            <a href="order.html?cafe=Cafe%20Coffee%20Day">Cafe Coffee Day</a>
+                            <a href="order.html?cafe=Kathi%20Junction">Kathi Junction</a>
+                            <a href="order.html?cafe=Maggi%20Point">Maggi Point</a>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </nav>
+                <a class="signup-btn cart-btn" href="#" id="cartButton">
+                    <span class="user-icon">🛒</span>
+                    Cart
+                    <span class="cart-count" id="cartCount">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contact Hero Section -->
+    <section class="contact-hero">
+        <div class="container">
+            <div class="contact-hero-content">
+                <h1 class="contact-title">Get in Touch</h1>
+                <p class="contact-subtitle">We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Information Section -->
+    <section class="contact-info">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">📍</div>
+                    <h3 class="contact-card-title">Address</h3>
+                    <p class="contact-card-text">BML Munjal University,NH-48,Haryana,India</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">📞</div>
+                    <h3 class="contact-card-title">Phone</h3>
+                    <p class="contact-card-text">+99999 99999</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">✉️</div>
+                    <h3 class="contact-card-title">Email</h3>
+                    <p class="contact-card-text">info@qmanage.com</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">🕒</div>
+                    <h3 class="contact-card-title">Hours</h3>
+                    <p class="contact-card-text">Mon - Sun: 9:00 AM - 11:00 PM</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="contact-form-content">
+                <div class="contact-form-left">
+                    <h2 class="form-title">Send us a Message</h2>
+                    <p class="form-description">Have a question or feedback? We'd love to hear from you. Fill out the form below and we'll get back to you as soon as possible.</p>
+                    <div class="contact-features">
+                        <div class="contact-feature">
+                            <div class="feature-icon">⚡</div>
+                            <div class="feature-text">
+                                <h4>Quick Response</h4>
+                                <p>We respond to all inquiries within 24 hours</p>
+                            </div>
+                        </div>
+                        <div class="contact-feature">
+                            <div class="feature-icon">🎯</div>
+                            <div class="feature-text">
+                                <h4>Personalized Service</h4>
+                                <p>Every message gets individual attention</p>
+                            </div>
+                        </div>
+                        <div class="contact-feature">
+                            <div class="feature-icon">💬</div>
+                            <div class="feature-text">
+                                <h4>Multiple Channels</h4>
+                                <p>Reach us via phone, email, or social media</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-right">
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Full Name</label>
+                            <input type="text" id="name" name="name" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" id="email" name="email" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone" class="form-label">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject" class="form-label">Subject</label>
+                            <select id="subject" name="subject" class="form-select" required>
+                                <option value="">Select a subject</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="order">Order Support</option>
+                                <option value="feedback">Feedback</option>
+                                <option value="complaint">Complaint</option>
+                                <option value="partnership">Partnership</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea id="message" name="message" class="form-textarea" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            Send Message
+                            <span class="arrow-icon">→</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <h2 class="map-title">Find Us</h2>
+            <div class="map-container">
+                <div class="map-placeholder">
+                    <div class="map-icon">🗺️</div>
+                    <p class="map-text">Interactive Map Coming Soon</p>
+                    <p class="map-address">BML Munjal University,NH-48,Haryana,India</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="faq-title">Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3 class="faq-question">How can I place an order?</h3>
+                    <p class="faq-answer">You can place an order by selecting your preferred cafe from the navigation menu and browsing their menu items. Add items to your cart and proceed to checkout.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">What are your delivery hours?</h3>
+                    <p class="faq-answer">We deliver from 9:00 AM to 11:00 PM, seven days a week. Delivery times may vary depending on your location and order volume.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">Do you offer vegetarian options?</h3>
+                    <p class="faq-answer">Yes! All our partner cafes offer a variety of vegetarian options. You can filter menu items by dietary preferences when browsing.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">How can I track my order?</h3>
+                    <p class="faq-answer">Once your order is confirmed, you'll receive a tracking link via SMS and email. You can also check your order status in your account dashboard.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <span class="logo-q">Q</span>manage
+                    </div>
+                    <p class="footer-address">BML Munjal University,NH-48,Haryana,India</p>
+                    <p class="footer-phone">+99999 99999</p>
+                    <p class="footer-email">info@qmanage.com</p>
+                    <p class="footer-copyright">© 2023 Qmanage. All Rights Reserved.</p>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-heading">About</h4>
+                    <ul class="footer-links">
+                        <li><a href="contact.html" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-heading">Menu</h4>
+                    <ul class="footer-links">
+                        <li><a href="order.html?cafe=Burger%20Singh" class="footer-link">Burger Singh</a></li>
+                        <li><a href="order.html?cafe=Sketch" class="footer-link">Sketch</a></li>
+                        <li><a href="order.html?cafe=Smoothie" class="footer-link">Smoothie</a></li>
+                        <li><a href="order.html?cafe=Domino's" class="footer-link">Domino's</a></li>
+                        <li><a href="order.html?cafe=Cafe%20Coffee%20Day" class="footer-link">Cafe Coffee Day</a></li>
+                        <li><a href="order.html?cafe=Kathi%20Junction" class="footer-link">Kathi Junction</a></li>
+                        <li><a href="order.html?cafe=Maggi%20Point" class="footer-link">Maggi Point</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-heading">Newsletter</h4>
+                    <p class="footer-newsletter-desc">Subscribe to our newsletter and get updates.</p>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Your email" class="newsletter-input">
+                        <button class="newsletter-btn">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-social">
+                <a href="#" class="social-link">Facebook</a>
+                <a href="#" class="social-link">Instagram</a>
+                <a href="#" class="social-link">X</a>
+                <a href="#" class="social-link">LinkedIn</a>
+            </div>
+            <div class="footer-decorations">
+                <div class="footer-deco left">🍕🍄🍋</div>
+                <div class="footer-deco right">🌿</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3 class="cart-title">Your Cart</h3>
+            <button class="cart-close" id="cartClose">×</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <div class="cart-empty" id="cartEmpty">
+                <div class="empty-cart-icon">🛒</div>
+                <p>Your cart is empty</p>
+                <p>Add some delicious items to get started!</p>
+            </div>
+        </div>
+        <div class="cart-footer" id="cartFooter">
+            <div class="cart-total">
+                <span class="total-label">Total:</span>
+                <span class="total-amount" id="cartTotal">₹0.00</span>
+            </div>
+            <button class="checkout-btn" id="checkoutBtn">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="js/utils.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+</html>

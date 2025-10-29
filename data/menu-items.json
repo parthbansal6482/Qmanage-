@@ -1,0 +1,584 @@
+{
+  "menuItems": {
+    "Burger Singh": {
+      "Pizza": [
+        {
+          "id": "bs-pizza-1",
+          "name": "Tandoori Paneer Pizza",
+          "price": 199,
+          "img": "https://images.unsplash.com/photo-1628840042765-356cda07504e?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "featured": true,
+          "rating": 4.5,
+          "description": "Delicious tandoori paneer on crispy crust"
+        },
+        {
+          "id": "bs-pizza-2",
+          "name": "Masala Chicken Pizza",
+          "price": 229,
+          "img": "https://images.unsplash.com/photo-1628840042765-356cda07504e?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "featured": false,
+          "rating": 4.3,
+          "description": "Spicy masala chicken with fresh vegetables"
+        }
+      ],
+      "Fruits": [
+        {
+          "id": "bs-fruit-1",
+          "name": "Fruit Bowl",
+          "price": 129,
+          "img": "https://images.unsplash.com/photo-1490474418585-ba9bad8fd0ea?w=400&h=400&fit=crop&crop=center",
+          "featured": false,
+          "rating": 4.2,
+          "description": "Fresh seasonal fruits"
+        }
+      ],
+      "Snacks": [
+        {
+          "id": "bs-snack-1",
+          "name": "Cheese Fries",
+          "price": 99,
+          "img": "https://images.unsplash.com/photo-1550547660-d9450f859349?w=400&h=400&fit=crop&crop=center",
+          "featured": false,
+          "rating": 4.0,
+          "description": "Crispy fries with melted cheese"
+        }
+      ],
+      "Veggies": [
+        {
+          "id": "bs-veggie-1",
+          "name": "Grilled Veggies",
+          "price": 149,
+          "img": "https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=400&h=400&fit=crop&crop=center",
+          "featured": false,
+          "rating": 4.1,
+          "description": "Fresh grilled vegetables"
+        }
+      ],
+      "Hotdog": [
+        {
+          "id": "bs-hotdog-1",
+          "name": "Classic Hotdog",
+          "price": 89,
+          "img": "https://images.unsplash.com/photo-1627054248949-21f77275a15f?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "featured": false,
+          "rating": 4.0,
+          "description": "Classic hotdog with fresh toppings"
+        }
+      ],
+      "Burger": [
+        {
+          "id": "bs-burger-1",
+          "name": "Singh Special Burger",
+          "price": 149,
+          "img": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&h=400&fit=crop&crop=center",
+          "featured": true,
+          "rating": 4.6,
+          "description": "Our signature burger with special sauce"
+        },
+        {
+          "id": "bs-burger-2",
+          "name": "Veggie Burger",
+          "price": 129,
+          "img": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&h=400&fit=crop&crop=center",
+          "featured": false,
+          "rating": 4.2,
+          "description": "Delicious veggie patty with fresh vegetables"
+        }
+      ],
+      "Drink": [
+        {
+          "id": "bs-drink-1",
+          "name": "Mango Lassi",
+          "price": 79,
+          "img": "https://images.unsplash.com/photo-1708782343412-787fade27b60?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "featured": false,
+          "rating": 4.4,
+          "description": "Refreshing mango lassi"
+        }
+      ]
+    },
+    "Sketch": {
+      "Pizza": [
+        {
+          "id": "sk-pizza-1",
+          "name": "Margherita",
+          "price": 179,
+          "img": "https://images.unsplash.com/photo-1628840042765-356cda07504e?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "featured": false,
+          "rating": 4.3,
+          "description": "Classic margherita pizza"
+        }
+      ],
+      "Fruits": [
+        {
+          "id": "sk-fruit-1",
+          "name": "Apple Slices",
+          "price": 69,
+          "img": "https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?w=400&h=400&fit=crop&crop=center",
+          "featured": false,
+          "rating": 4.0,
+          "description": "Fresh apple slices"
+        }
+      ],
+      "Snacks": [
+        {
+          "id": "sk-snack-1",
+          "name": "Popcorn Tub",
+          "price": 60,
+          "img": "https://images.unsplash.com/photo-1682970468783-0cc45cfdd1b6?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "featured": false,
+          "rating": 3.8,
+          "description": "Buttered popcorn"
+        }
+      ],
+      "Veggies": [
+        {
+          "id": "sk-veggie-1",
+          "name": "Veggie Bowl",
+          "price": 139,
+          "img": "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=400&h=400&fit=crop&crop=center",
+          "featured": false,
+          "rating": 4.1,
+          "description": "Mixed vegetable bowl"
+        }
+      ],
+      "Hotdog": [
+        {
+          "id": "sk-hotdog-1",
+          "name": "Cheese Hotdog",
+          "price": 99,
+          "img": "https://images.unsplash.com/photo-1627054248949-21f77275a15f?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "featured": false,
+          "rating": 4.2,
+          "description": "Hotdog with melted cheese"
+        }
+      ],
+      "Burger": [
+        {
+          "id": "sk-burger-1",
+          "name": "Stacked Burger",
+          "price": 189,
+          "img": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&h=400&fit=crop&crop=center",
+          "featured": true,
+          "rating": 4.5,
+          "description": "Multi-layer stacked burger"
+        }
+      ],
+      "Drink": [
+        {
+          "id": "sk-drink-1",
+          "name": "Cold Coffee",
+          "price": 99,
+          "img": "https://images.unsplash.com/photo-1511920170033-f8396924c348?w=400&h=400&fit=crop&crop=center",
+          "featured": false,
+          "rating": 4.3,
+          "description": "Iced cold coffee"
+        }
+      ]
+    },
+    "Domino's": {
+      "Pizza": [
+        {
+          "id": "dom-pizza-1",
+          "name": "Peppy Paneer",
+          "price": 249,
+          "img": "https://images.unsplash.com/photo-1628840042765-356cda07504e?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "featured": true,
+          "rating": 4.4,
+          "description": "Spicy paneer pizza"
+        },
+        {
+          "id": "dom-pizza-2",
+          "name": "Farmhouse",
+          "price": 259,
+          "img": "https://images.unsplash.com/photo-1628840042765-356cda07504e?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "featured": false,
+          "rating": 4.2,
+          "description": "Fresh farmhouse vegetables"
+        }
+      ],
+      "Fruits": [
+        {
+          "id": "dom-fruit-1",
+          "name": "Orange Cup",
+          "price": 59,
+          "img": "https://images.unsplash.com/photo-1547514701-42782101795e?w=400&h=400&fit=crop&crop=center",
+          "featured": false,
+          "rating": 3.9,
+          "description": "Fresh orange segments"
+        }
+      ],
+      "Snacks": [
+        {
+          "id": "dom-snack-1",
+          "name": "Garlic Bread",
+          "price": 109,
+          "img": "https://images.unsplash.com/photo-1550547660-d9450f859349?w=400&h=400&fit=crop&crop=center",
+          "featured": false,
+          "rating": 4.1,
+          "description": "Garlic bread with herbs"
+        }
+      ],
+      "Veggies": [
+        {
+          "id": "dom-veggie-1",
+          "name": "Corn Salad",
+          "price": 119,
+          "img": "https://images.unsplash.com/photo-1551248429-40975aa4de74?w=400&h=400&fit=crop&crop=center",
+          "featured": false,
+          "rating": 4.0,
+          "description": "Fresh corn salad"
+        }
+      ],
+      "Hotdog": [
+        {
+          "id": "dom-hotdog-1",
+          "name": "Sausage Roll",
+          "price": 99,
+          "img": "https://images.unsplash.com/photo-1627054248949-21f77275a15f?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "featured": false,
+          "rating": 4.0,
+          "description": "Sausage roll with sauce"
+        }
+      ],
+      "Burger": [
+        {
+          "id": "dom-burger-1",
+          "name": "Paneer Burger",
+          "price": 139,
+          "img": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&h=400&fit=crop&crop=center",
+          "featured": false,
+          "rating": 4.2,
+          "description": "Paneer burger with fresh vegetables"
+        }
+      ],
+      "Drink": [
+        {
+          "id": "dom-drink-1",
+          "name": "Coke",
+          "price": 49,
+          "img": "https://images.unsplash.com/photo-1708782343412-787fade27b60?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "featured": false,
+          "rating": 3.8,
+          "description": "Refreshing cola drink"
+        }
+      ]
+    },
+    "Cafe Coffee Day": {
+      "Pizza": [
+        {
+          "id": "ccd-pizza-1",
+          "name": "Cheese Pizza",
+          "price": 199,
+          "img": "https://images.unsplash.com/photo-1628840042765-356cda07504e?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "featured": false,
+          "rating": 4.1,
+          "description": "Classic cheese pizza"
+        }
+      ],
+      "Fruits": [
+        {
+          "id": "ccd-fruit-1",
+          "name": "Berry Cup",
+          "price": 129,
+          "img": "https://images.unsplash.com/photo-1464965911861-746a04b4bca6?w=400&h=400&fit=crop&crop=center",
+          "featured": false,
+          "rating": 4.3,
+          "description": "Mixed berry fruit cup"
+        }
+      ],
+      "Snacks": [
+        {
+          "id": "ccd-snack-1",
+          "name": "Brownie",
+          "price": 89,
+          "img": "https://images.unsplash.com/photo-1550547660-d9450f859349?w=400&h=400&fit=crop&crop=center",
+          "featured": true,
+          "rating": 4.5,
+          "description": "Chocolate brownie"
+        }
+      ],
+      "Veggies": [
+        {
+          "id": "ccd-veggie-1",
+          "name": "Greek Salad",
+          "price": 149,
+          "img": "https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=400&h=400&fit=crop&crop=center",
+          "featured": false,
+          "rating": 4.2,
+          "description": "Fresh greek salad"
+        }
+      ],
+      "Hotdog": [
+        {
+          "id": "ccd-hotdog-1",
+          "name": "Mini Hotdog",
+          "price": 79,
+          "img": "https://images.unsplash.com/photo-1627054248949-21f77275a15f?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "featured": false,
+          "rating": 3.9,
+          "description": "Mini hotdog bites"
+        }
+      ],
+      "Burger": [
+        {
+          "id": "ccd-burger-1",
+          "name": "Grilled Burger",
+          "price": 159,
+          "img": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&h=400&fit=crop&crop=center",
+          "featured": false,
+          "rating": 4.1,
+          "description": "Grilled chicken burger"
+        }
+      ],
+      "Drink": [
+        {
+          "id": "ccd-drink-1",
+          "name": "Cappuccino",
+          "price": 129,
+          "img": "https://images.unsplash.com/photo-1708782343412-787fade27b60?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "featured": true,
+          "rating": 4.4,
+          "description": "Premium cappuccino"
+        }
+      ]
+    },
+    "Kathi Junction": {
+      "Pizza": [
+        {
+          "id": "kj-pizza-1",
+          "name": "Kathi Pizza",
+          "price": 189,
+          "img": "https://images.unsplash.com/photo-1628840042765-356cda07504e?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "featured": false,
+          "rating": 4.0,
+          "description": "Pizza with kathi flavors"
+        }
+      ],
+      "Fruits": [
+        {
+          "id": "kj-fruit-1",
+          "name": "Mixed Fruit",
+          "price": 99,
+          "img": "https://images.unsplash.com/photo-1490474418585-ba9bad8fd0ea?w=400&h=400&fit=crop&crop=center",
+          "featured": false,
+          "rating": 4.1,
+          "description": "Mixed seasonal fruits"
+        }
+      ],
+      "Snacks": [
+        {
+          "id": "kj-snack-1",
+          "name": "Kathi Roll",
+          "price": 139,
+          "img": "https://images.unsplash.com/photo-1550547660-d9450f859349?w=400&h=400&fit=crop&crop=center",
+          "featured": true,
+          "rating": 4.6,
+          "description": "Signature kathi roll"
+        }
+      ],
+      "Veggies": [
+        {
+          "id": "kj-veggie-1",
+          "name": "Veg Roll",
+          "price": 119,
+          "img": "https://images.unsplash.com/photo-1526318472351-c75fcf070305?w=400&h=400&fit=crop&crop=center",
+          "featured": false,
+          "rating": 4.2,
+          "description": "Vegetable roll"
+        }
+      ],
+      "Hotdog": [
+        {
+          "id": "kj-hotdog-1",
+          "name": "Spicy Hotdog",
+          "price": 99,
+          "img": "https://images.unsplash.com/photo-1627054248949-21f77275a15f?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "featured": false,
+          "rating": 4.0,
+          "description": "Spicy hotdog with masala"
+        }
+      ],
+      "Burger": [
+        {
+          "id": "kj-burger-1",
+          "name": "Aloo Tikki Burger",
+          "price": 109,
+          "img": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&h=400&fit=crop&crop=center",
+          "featured": false,
+          "rating": 4.1,
+          "description": "Aloo tikki burger"
+        }
+      ],
+      "Drink": [
+        {
+          "id": "kj-drink-1",
+          "name": "Masala Chai",
+          "price": 39,
+          "img": "https://images.unsplash.com/photo-1708782343412-787fade27b60?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "featured": false,
+          "rating": 4.3,
+          "description": "Traditional masala chai"
+        }
+      ]
+    },
+    "Maggi Point": {
+      "Pizza": [
+        {
+          "id": "mp-pizza-1",
+          "name": "Cheese Maggi Pizza",
+          "price": 159,
+          "img": "https://images.unsplash.com/photo-1628840042765-356cda07504e?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "featured": false,
+          "rating": 3.9,
+          "description": "Pizza with maggi noodles"
+        }
+      ],
+      "Fruits": [
+        {
+          "id": "mp-fruit-1",
+          "name": "Banana Bowl",
+          "price": 49,
+          "img": "https://images.unsplash.com/photo-1652448919151-c8be3cfb185b?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "featured": false,
+          "rating": 3.8,
+          "description": "Fresh banana bowl"
+        }
+      ],
+      "Snacks": [
+        {
+          "id": "mp-snack-1",
+          "name": "Masala Maggi",
+          "price": 69,
+          "img": "https://images.unsplash.com/photo-1550547660-d9450f859349?w=400&h=400&fit=crop&crop=center",
+          "featured": true,
+          "rating": 4.4,
+          "description": "Classic masala maggi"
+        }
+      ],
+      "Veggies": [
+        {
+          "id": "mp-veggie-1",
+          "name": "Corn Peas Maggi",
+          "price": 89,
+          "img": "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=400&h=400&fit=crop&crop=center",
+          "featured": false,
+          "rating": 4.0,
+          "description": "Maggi with corn and peas"
+        }
+      ],
+      "Hotdog": [
+        {
+          "id": "mp-hotdog-1",
+          "name": "Veg Hotdog",
+          "price": 89,
+          "img": "https://images.unsplash.com/photo-1627054248949-21f77275a15f?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "featured": false,
+          "rating": 3.9,
+          "description": "Vegetarian hotdog"
+        }
+      ],
+      "Burger": [
+        {
+          "id": "mp-burger-1",
+          "name": "Cheese Burger",
+          "price": 129,
+          "img": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&h=400&fit=crop&crop=center",
+          "featured": false,
+          "rating": 4.0,
+          "description": "Cheese burger"
+        }
+      ],
+      "Drink": [
+        {
+          "id": "mp-drink-1",
+          "name": "Lemon Iced Tea",
+          "price": 59,
+          "img": "https://images.unsplash.com/photo-1708782343412-787fade27b60?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "featured": false,
+          "rating": 4.1,
+          "description": "Refreshing lemon iced tea"
+        }
+      ]
+    },
+    "Smoothie": {
+      "Pizza": [
+        {
+          "id": "sm-pizza-1",
+          "name": "Veggie Pizza",
+          "price": 169,
+          "img": "https://images.unsplash.com/photo-1628840042765-356cda07504e?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "featured": false,
+          "rating": 4.0,
+          "description": "Healthy veggie pizza"
+        }
+      ],
+      "Fruits": [
+        {
+          "id": "sm-fruit-1",
+          "name": "Strawberry Mix",
+          "price": 119,
+          "img": "https://images.unsplash.com/photo-1652448919151-c8be3cfb185b?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "featured": true,
+          "rating": 4.5,
+          "description": "Fresh strawberry mix"
+        }
+      ],
+      "Snacks": [
+        {
+          "id": "sm-snack-1",
+          "name": "Granola Bar",
+          "price": 59,
+          "img": "https://images.unsplash.com/photo-1550547660-d9450f859349?w=400&h=400&fit=crop&crop=center",
+          "featured": false,
+          "rating": 4.2,
+          "description": "Healthy granola bar"
+        }
+      ],
+      "Veggies": [
+        {
+          "id": "sm-veggie-1",
+          "name": "Kale Salad",
+          "price": 139,
+          "img": "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=400&h=400&fit=crop&crop=center",
+          "featured": false,
+          "rating": 4.1,
+          "description": "Fresh kale salad"
+        }
+      ],
+      "Hotdog": [
+        {
+          "id": "sm-hotdog-1",
+          "name": "Chicken Hotdog",
+          "price": 109,
+          "img": "https://images.unsplash.com/photo-1627054248949-21f77275a15f?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "featured": false,
+          "rating": 4.0,
+          "description": "Chicken hotdog"
+        }
+      ],
+      "Burger": [
+        {
+          "id": "sm-burger-1",
+          "name": "Healthy Burger",
+          "price": 169,
+          "img": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&h=400&fit=crop&crop=center",
+          "featured": false,
+          "rating": 4.3,
+          "description": "Healthy burger option"
+        }
+      ],
+      "Drink": [
+        {
+          "id": "sm-drink-1",
+          "name": "Mango Smoothie",
+          "price": 129,
+          "img": "https://images.unsplash.com/photo-1708782343412-787fade27b60?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "featured": true,
+          "rating": 4.6,
+          "description": "Fresh mango smoothie"
+        }
+      ]
+    }
+  }
+}
