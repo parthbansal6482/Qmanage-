@@ -1,0 +1,75 @@
+<section class="admin-hero">
+  <div class="container">
+    <h1 class="page-title">Manage Outlets</h1>
+    <p class="page-subtitle">
+      Add new outlets, update timings, and keep campus information up to date.
+    </p>
+  </div>
+</section>
+
+<section class="admin-content">
+  <div class="container admin-split">
+    <div class="admin-panel">
+      <h2 class="panel-title">Create / Update Outlet</h2>
+      <form id="outletForm" class="admin-form" novalidate>
+        <input type="hidden" id="outletId" name="outletId" />
+        <div class="form-group">
+          <label for="outletName">Outlet Name</label>
+          <input type="text" id="outletName" name="outletName" required placeholder="e.g. Burger Singh" />
+        </div>
+        <div class="form-group">
+          <label for="outletLocation">Location</label>
+          <input type="text" id="outletLocation" name="outletLocation" required placeholder="Campus location" />
+        </div>
+        <div class="form-group">
+          <label for="outletTimings">Timings</label>
+          <input type="text" id="outletTimings" name="outletTimings" required placeholder="Mon - Sun: 9:00 AM - 11:00 PM" />
+        </div>
+        <div class="form-group">
+          <label for="outletDescription">Description</label>
+          <textarea id="outletDescription" name="outletDescription" rows="3" placeholder="Short description of the outlet"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="outletImage">Image URL</label>
+          <input type="url" id="outletImage" name="outletImage" placeholder="https://example.com/banner.jpg" />
+        </div>
+        <div class="form-group">
+          <label for="outletCategories">Categories (comma separated)</label>
+          <input type="text" id="outletCategories" name="outletCategories" placeholder="Pizza, Snacks, Drinks" />
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn-primary">Save Outlet</button>
+          <button type="button" id="outletFormReset" class="btn-outline">Reset</button>
+        </div>
+        <p class="form-feedback" id="outletFormFeedback" hidden></p>
+      </form>
+    </div>
+
+    <div class="admin-panel">
+      <div class="panel-header">
+        <h2 class="panel-title">Existing Outlets</h2>
+        <div class="panel-actions">
+          <input type="search" id="outletAdminSearch" class="control-input" placeholder="Search outlets" />
+        </div>
+      </div>
+      <div class="table-wrapper">
+        <table class="table" id="outletTable">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Location</th>
+              <th>Timings</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <div id="outletTableEmptyState" class="empty-state-table" hidden>
+          <div class="empty-state-icon">🏪</div>
+          <p>No outlets found. Use the form to add your first outlet.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      <% 
+        const pageTitle = typeof title !== 'undefined' && title ? title : '';
+        const siteName = (typeof site !== 'undefined' && site?.name) ? site.name : 'Qmanage';
+        const fullTitle = pageTitle ? `${pageTitle} • ${siteName}` : siteName;
+      %>
+      <%= fullTitle %>
+    </title>
+    <link rel="stylesheet" href="/css/main.css" />
+    <% if (typeof stylesheets !== 'undefined' && Array.isArray(stylesheets)) { stylesheets.forEach(function (href) { %>
+    <link rel="stylesheet" href="<%= href %>" />
+    <% }); } %>
+  </head>
+  <body class="<%= typeof bodyClass !== 'undefined' ? bodyClass : '' %>">
+    <%- include('partials/header') %>
+
+    <main id="main-content" tabindex="-1">
+      <%- body %>
+    </main>
+
+    <%- include('partials/footer') %>
+
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <div class="cart-sidebar" id="cartSidebar">
+      <div class="cart-header">
+        <h3 class="cart-title">Your Cart</h3>
+        <button class="cart-close" id="cartClose">×</button>
+      </div>
+      <div class="cart-items" id="cartItems">
+        <div class="cart-empty" id="cartEmpty">
+          <div class="empty-cart-icon">🛒</div>
+          <p>Your cart is empty</p>
+          <p>Add some delicious items to get started!</p>
+        </div>
+      </div>
+      <div class="cart-footer" id="cartFooter">
+        <div class="cart-total">
+          <span class="total-label">Total:</span>
+          <span class="total-amount" id="cartTotal">₹0.00</span>
+        </div>
+        <button type="button" class="checkout-btn" id="checkoutBtn">Place Order</button>
+      </div>
+    </div>
+
+    <script src="/js/utils.js"></script>
+    <script src="/js/data-loader.js"></script>
+    <script src="/js/main.js"></script>
+    <% if (typeof scripts !== 'undefined' && Array.isArray(scripts)) { scripts.forEach(function (src) { %>
+    <script src="<%= src %>"></script>
+    <% }); } %>
+  </body>
+</html>
+

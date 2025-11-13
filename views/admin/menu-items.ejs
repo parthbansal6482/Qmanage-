@@ -1,0 +1,84 @@
+<section class="admin-hero">
+  <div class="container">
+    <h1 class="page-title">Manage Menu Items</h1>
+    <p class="page-subtitle">
+      Add dishes to outlets, update pricing, and toggle availability in real time.
+    </p>
+  </div>
+</section>
+
+<section class="admin-content">
+  <div class="container admin-split">
+    <div class="admin-panel">
+      <h2 class="panel-title">Menu Item Details</h2>
+      <form id="menuItemForm" class="admin-form" novalidate>
+        <input type="hidden" id="menuItemId" name="menuItemId" />
+        <div class="form-group">
+          <label for="menuItemOutlet">Outlet</label>
+          <select id="menuItemOutlet" name="menuItemOutlet" required></select>
+        </div>
+        <div class="form-group">
+          <label for="menuItemName">Item Name</label>
+          <input type="text" id="menuItemName" name="menuItemName" required placeholder="e.g. Tandoori Paneer Pizza" />
+        </div>
+        <div class="form-group">
+          <label for="menuItemCategory">Category</label>
+          <input type="text" id="menuItemCategory" name="menuItemCategory" required placeholder="e.g. Pizza, Drinks" />
+        </div>
+        <div class="form-group">
+          <label for="menuItemPrice">Price (₹)</label>
+          <input type="number" id="menuItemPrice" name="menuItemPrice" required min="0" step="1" />
+        </div>
+        <div class="form-group">
+          <label for="menuItemImage">Image URL</label>
+          <input type="url" id="menuItemImage" name="menuItemImage" placeholder="https://example.com/food.jpg" />
+        </div>
+        <div class="form-group">
+          <label for="menuItemDescription">Description</label>
+          <textarea id="menuItemDescription" name="menuItemDescription" rows="3" placeholder="Describe the dish"></textarea>
+        </div>
+        <div class="form-group checkbox-group">
+          <input type="checkbox" id="menuItemAvailability" name="menuItemAvailability" checked />
+          <label for="menuItemAvailability">Available for ordering</label>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn-primary">Save Item</button>
+          <button type="button" id="menuItemFormReset" class="btn-outline">Reset</button>
+        </div>
+        <p class="form-feedback" id="menuItemFormFeedback" hidden></p>
+      </form>
+    </div>
+
+    <div class="admin-panel">
+      <div class="panel-header">
+        <h2 class="panel-title">Menu Inventory</h2>
+        <div class="panel-actions">
+          <input type="search" id="menuItemSearch" class="control-input" placeholder="Search by name or outlet" />
+          <select id="menuItemFilterOutlet" class="control-input">
+            <option value="all">All outlets</option>
+          </select>
+        </div>
+      </div>
+      <div class="table-wrapper">
+        <table class="table" id="menuItemTable">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Outlet</th>
+              <th>Category</th>
+              <th>Price</th>
+              <th>Availability</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <div id="menuItemTableEmptyState" class="empty-state-table" hidden>
+          <div class="empty-state-icon">🍽️</div>
+          <p>No menu items found. Add your first dish using the form.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

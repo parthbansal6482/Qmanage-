@@ -1,0 +1,68 @@
+<section class="admin-hero">
+  <div class="container">
+    <h1 class="page-title">Manage Orders</h1>
+    <p class="page-subtitle">
+      Track customer orders, update statuses, and keep service running smoothly.
+    </p>
+  </div>
+</section>
+
+<section class="admin-content">
+  <div class="container">
+    <div class="admin-panel">
+      <div class="panel-header">
+        <h2 class="panel-title">Live Orders</h2>
+        <div class="panel-actions">
+          <select id="orderFilterStatus" class="control-input">
+            <option value="all">All statuses</option>
+            <option value="pending">Pending</option>
+            <option value="preparing">Preparing</option>
+            <option value="ready">Ready</option>
+            <option value="completed">Completed</option>
+            <option value="cancelled">Cancelled</option>
+          </select>
+          <select id="orderFilterOutlet" class="control-input">
+            <option value="all">All outlets</option>
+          </select>
+          <input type="search" id="orderSearch" class="control-input" placeholder="Search by customer or order ID" />
+        </div>
+      </div>
+
+      <div class="table-wrapper">
+        <table class="table" id="ordersTable">
+          <thead>
+            <tr>
+              <th>Order</th>
+              <th>Customer</th>
+              <th>Outlet</th>
+              <th>Total</th>
+              <th>Status</th>
+              <th>Updated</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <div id="ordersTableEmptyState" class="empty-state-table" hidden>
+          <div class="empty-state-icon">🧾</div>
+          <p>No orders yet. Once customers place orders, they will appear here in real time.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="modal" id="orderDetailsModal" hidden aria-hidden="true">
+  <div class="modal-overlay" data-dismiss="modal"></div>
+  <div class="modal-dialog modal-lg">
+    <button class="modal-close" data-dismiss="modal">×</button>
+    <div class="modal-header">
+      <h2 id="orderDetailsTitle">Order Details</h2>
+    </div>
+    <div class="modal-body" id="orderDetailsBody"></div>
+    <div class="modal-footer">
+      <button class="btn-outline" data-dismiss="modal">Close</button>
+    </div>
+  </div>
+</div>
+

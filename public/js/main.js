@@ -7,6 +7,7 @@
 class Cart {
     constructor() {
         this.items = JSON.parse(localStorage.getItem('cartItems')) || [];
+        this.outletId = localStorage.getItem('cartOutletId') || null;
         this.previousItems = [];
         this.init();
     }
@@ -45,9 +46,57 @@ class Cart {
         // Place Order
         const checkoutBtn = document.getElementById('checkoutBtn');
         if (checkoutBtn) {
-            checkoutBtn.addEventListener('click', () => {
-                this.placeOrder();
+            checkoutBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                
+                console.log('Place Order button clicked');
+                console.log('Button disabled?', checkoutBtn.disabled);
+                console.log('Cart items:', this.items);
+                console.log('Cart outletId:', this.outletId);
+                
+                // Check if button is disabled
+                if (checkoutBtn.disabled) {
+                    console.log('Button is disabled, cannot proceed');
+                    return;
+                }
+                
+                if (!this.items || this.items.length === 0) {
+                    window.Utils.NotificationManager.show('Add items before checking out.', 'warning');
+                    return;
+                }
+                
+                // Check if all items have outlet and menuItem ID
+                const outletId = this.outletId || this.items[0]?.outletId;
+                
+                if (!outletId) {
+                    console.log('No outlet ID found, showing warning');
+                    window.Utils.NotificationManager.show(
+                        'Please add items from an outlet first. Go to the Order page to select an outlet.',
+                        'warning'
+                    );
+                    // Still allow redirect for testing - remove this later
+                    // return;
+                }
+
+                // Check if items have menuItem IDs
+                const itemsWithoutMenuItemId = this.items.filter(item => !item.menuItemId);
+                if (itemsWithoutMenuItemId.length > 0) {
+                    console.log('Some items missing menuItemId:', itemsWithoutMenuItemId);
+                    window.Utils.NotificationManager.show(
+                        'Some items are missing menu information. Please add items from the Order page.',
+                        'warning'
+                    );
+                    // Still allow redirect for testing - remove this later
+                    // return;
+                }
+
+                // Redirect to checkout page
+                console.log('Redirecting to checkout page...');
+                window.location.href = '/checkout';
             });
+        } else {
+            console.error('checkoutBtn not found!');
         }
     }
 
@@ -55,10 +104,23 @@ class Cart {
         console.log('Adding item:', item);
         console.log('Current cart items before:', this.items);
         
+        // If item has outletId, set it on cart if cart doesn't have one
+        if (item.outletId && !this.outletId) {
+            this.outletId = item.outletId;
+            console.log('Setting cart outletId from item:', item.outletId);
+        }
+        
         const existingItem = this.items.find(cartItem => cartItem.name === item.name);
         
         if (existingItem) {
             existingItem.quantity += 1;
+            // Update outletId and menuItemId if the new item has them
+            if (item.outletId && !existingItem.outletId) {
+                existingItem.outletId = item.outletId;
+            }
+            if (item.menuItemId && !existingItem.menuItemId) {
+                existingItem.menuItemId = item.menuItemId;
+            }
             console.log('Updated existing item quantity:', existingItem);
         } else {
             this.items.push(item);
@@ -93,6 +155,12 @@ class Cart {
 
     saveCart() {
         localStorage.setItem('cartItems', JSON.stringify(this.items));
+        if (this.outletId) {
+            localStorage.setItem('cartOutletId', this.outletId);
+        } else {
+            localStorage.removeItem('cartOutletId');
+        }
+        this.emitUpdate();
     }
 
     updateCartDisplay() {
@@ -185,6 +253,7 @@ class Cart {
         // Backup, then clear cart data
         this.previousItems = this.items.map(item => ({...item}));
         this.items = [];
+        this.outletId = null;
         this.saveCart();
         this.updateCartCount();
         this.updateCartTotal();
@@ -224,6 +293,19 @@ class Cart {
             const total = this.items.reduce((sum, item) => sum + (item.price * item.quantity), 0);
             cartTotal.textContent = `₹${total.toFixed(2)}`;
         }
+    }
+
+    getTotalAmount() {
+        return this.items.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+    }
+
+    emitUpdate() {
+        window.dispatchEvent(new CustomEvent('cart:updated', {
+            detail: {
+                items: this.items.map(item => ({ ...item })),
+                total: this.getTotalAmount()
+            }
+        }));
     }
 
     toggleCart() {
@@ -282,101 +364,6 @@ class Cart {
     }
 }
 
-// Home page functionality
-class HomePage {
-    constructor() {
-        this.dataLoader = window.dataLoader;
-        this.init();
-    }
-
-    async init() {
-        await this.loadAndRenderBestSelling();
-        await this.loadAndRenderFeaturedProducts();
-        await this.loadAndRenderCategories();
-    }
-
-    async loadAndRenderBestSelling() {
-        try {
-            const data = await this.dataLoader.loadBestSelling();
-            this.renderBestSelling(data.bestSelling);
-        } catch (error) {
-            console.error('Error loading best selling data:', error);
-        }
-    }
-
-    async loadAndRenderFeaturedProducts() {
-        try {
-            const data = await this.dataLoader.loadFeaturedProducts();
-            this.renderFeaturedProducts(data.featuredProducts);
-        } catch (error) {
-            console.error('Error loading featured products data:', error);
-        }
-    }
-
-    renderBestSelling(products) {
-        const productGrid = document.querySelector('.best-selling .product-grid');
-        if (!productGrid) return;
-
-        productGrid.innerHTML = '';
-        products.forEach(product => {
-            const productCard = document.createElement('div');
-            productCard.className = 'product-card';
-            productCard.innerHTML = `
-                <img src="${product.image}" alt="${product.name}" class="product-img">
-                <h3 class="product-name">${product.name}</h3>
-                <p class="product-price">₹${product.price.toFixed(2)}</p>
-                <button class="add-to-cart">+</button>
-            `;
-            productGrid.appendChild(productCard);
-        });
-    }
-
-    renderFeaturedProducts(products) {
-        const featuredGrid = document.querySelector('.featured-products .featured-grid');
-        if (!featuredGrid) return;
-
-        featuredGrid.innerHTML = '';
-        products.forEach(product => {
-            const productCard = document.createElement('div');
-            productCard.className = 'product-card';
-            productCard.innerHTML = `
-                <img src="${product.image}" alt="${product.name}" class="product-img">
-                <h3 class="product-name">${product.name}</h3>
-                <p class="product-price">₹${product.price.toFixed(2)}</p>
-                <button class="add-to-cart">+</button>
-            `;
-            featuredGrid.appendChild(productCard);
-        });
-    }
-
-    async loadAndRenderCategories() {
-        try {
-            const data = await this.dataLoader.loadRestaurants();
-            this.renderCategories(data.restaurants);
-        } catch (error) {
-            console.error('Error loading categories data:', error);
-        }
-    }
-
-    renderCategories(restaurants) {
-        const categoryItems = document.querySelector('.category-items');
-        if (!categoryItems) return;
-
-        categoryItems.innerHTML = '';
-        restaurants.forEach(restaurant => {
-            const categoryItem = document.createElement('a');
-            categoryItem.className = 'category-item';
-            categoryItem.href = `order.html?cafe=${encodeURIComponent(restaurant.name)}`;
-            categoryItem.innerHTML = `
-                <img src="${restaurant.image}" alt="${restaurant.name}" class="category-img">
-                <h3 class="category-title">${restaurant.name}</h3>
-                <p class="category-desc">${restaurant.description}</p>
-            `;
-            categoryItems.appendChild(categoryItem);
-        });
-    }
-}
-
 // Initialize cart when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
     // Small delay to ensure all DOM elements are available
@@ -386,10 +373,6 @@ document.addEventListener('DOMContentLoaded', function() {
         window.cart = new Cart();
         console.log('Cart initialized with items:', window.cart.items);
 
-        // Initialize home page if we're on the home page
-        if (window.location.pathname.includes('index.html') || window.location.pathname === '/' || window.location.pathname.endsWith('/')) {
-            new HomePage();
-        }
     }, 100);
     
     // Use event delegation for dynamically added elements

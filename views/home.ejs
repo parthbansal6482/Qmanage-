@@ -1,0 +1,167 @@
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1 class="hero-title">
+          <span class="title-line1">Welcome</span>
+          <span class="title-line2">To <%= site?.name || 'Qmanage' %></span>
+        </h1>
+        <p class="hero-description">
+          You can find your favorite dishes and order with the most delicious food experience
+        </p>
+        <a href="#best-selling" class="order-now-btn">
+          Order Now
+          <span class="arrow-icon">→</span>
+        </a>
+      </div>
+      <div class="hero-image">
+        <img src="/img/chicken.png" alt="Roasted Chicken" class="main-dish" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="category-slider">
+  <div class="container">
+    <div class="category-content">
+      <div class="category-decorations left">
+        <div class="pizza-outline">🍕</div>
+        <div class="nav-dots">
+          <span class="nav-dot"></span>
+          <span class="nav-dot"></span>
+        </div>
+      </div>
+      <div class="category-items" id="categoryItems">
+        <% (outlets || []).forEach(function(outlet) { %>
+        <a class="category-item" href="/orders?outlet=<%= encodeURIComponent(outlet.name || outlet.id || '') %>">
+          <img
+            src="<%= outlet.image || '/img/373.png' %>"
+            alt="<%= outlet.name %>"
+            class="category-img"
+          />
+          <h3 class="category-title"><%= outlet.name %></h3>
+          <p class="category-desc"><%= outlet.description || 'Full of delicious' %></p>
+        </a>
+        <% }); %>
+      </div>
+      <div class="category-decorations right">
+        <div class="mushroom-outline">🍄</div>
+        <div class="nav-arrows">
+          <span class="nav-arrow left">←</span>
+          <span class="nav-arrow right">→</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="best-selling" class="best-selling">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">BEST SELLING</h2>
+      <div class="section-controls">
+        <div class="nav-arrows">
+          <span class="nav-arrow">←</span>
+          <span class="nav-arrow">→</span>
+        </div>
+      </div>
+    </div>
+    <div class="product-grid">
+      <% (bestSelling || []).forEach(function(product) { %>
+      <div class="product-card">
+        <img
+          src="<%= product.image || '/img/373.png' %>"
+          alt="<%= product.name %>"
+          class="product-img"
+        />
+        <h3 class="product-name"><%= product.name %></h3>
+        <p class="product-price">₹<%= Number(product.price || 0).toFixed(2) %></p>
+        <button class="add-to-cart" data-product-id="<%= product.id || product._id || '' %>">+</button>
+      </div>
+      <% }); %>
+    </div>
+  </div>
+</section>
+
+<section class="testimonial">
+  <div class="container">
+    <div class="testimonial-content">
+      <div class="testimonial-image">
+        <img
+          src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=500&h=400&fit=crop&crop=center"
+          alt="Happy Family"
+          class="family-img"
+        />
+      </div>
+      <div class="testimonial-text">
+        <h2 class="testimonial-title">
+          <span class="testimonial-highlight">Testimonial!</span>
+          <span class="testimonial-subtitle">Customers Say About Us</span>
+        </h2>
+        <blockquote class="testimonial-quote">
+          "The food quality is exceptional and the delivery service is incredibly fast. We've been ordering from Qmanage for months and never been disappointed!"
+        </blockquote>
+        <div class="testimonial-rating">
+          <span class="star">★</span>
+          <span class="star">★</span>
+          <span class="star">★</span>
+          <span class="star">★</span>
+          <span class="star">★</span>
+        </div>
+        <div class="testimonial-author">
+          <span class="author-name">Parth Bansal</span>
+          <span class="author-title">Customer</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="featured-products">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">FEATURED PRODUCTS</h2>
+      <div class="nav-arrows">
+        <span class="nav-arrow">←</span>
+        <span class="nav-arrow">→</span>
+      </div>
+    </div>
+    <div class="featured-grid">
+      <% (featuredProducts || []).forEach(function(product) { %>
+      <div class="product-card">
+        <img
+          src="<%= product.image || '/img/373.png' %>"
+          alt="<%= product.name %>"
+          class="product-img"
+        />
+        <h3 class="product-name"><%= product.name %></h3>
+        <p class="product-price">₹<%= Number(product.price || 0).toFixed(2) %></p>
+        <button class="add-to-cart" data-product-id="<%= product.id || product._id || '' %>">+</button>
+      </div>
+      <% }); %>
+    </div>
+  </div>
+</section>
+
+<section class="feature-highlights">
+  <div class="container">
+    <div class="features-grid">
+      <div class="feature-item">
+        <div class="feature-icon">🎁</div>
+        <h3 class="feature-title">Quality Food</h3>
+        <p class="feature-desc">Fresh ingredients and premium quality</p>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">👨‍🍳</div>
+        <h3 class="feature-title">Fresh Food</h3>
+        <p class="feature-desc">Prepared fresh daily with care</p>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">✅</div>
+        <h3 class="feature-title">Product Quality</h3>
+        <p class="feature-desc">Guaranteed satisfaction every time</p>
+      </div>
+    </div>
+  </div>
+</section>
+

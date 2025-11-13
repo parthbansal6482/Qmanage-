@@ -1,0 +1,94 @@
+<section class="page-hero">
+  <div class="container">
+    <h1 class="page-title">Discover Our Menu</h1>
+    <p class="page-subtitle">
+      Explore a curated selection of dishes from all of our campus outlets.
+    </p>
+  </div>
+</section>
+
+<section class="menu-controls">
+  <div class="container">
+    <div class="controls-grid">
+      <div class="control-group">
+        <label for="menuSearch" class="control-label">Search items</label>
+        <input
+          type="search"
+          id="menuSearch"
+          class="control-input"
+          placeholder="Search for burgers, pizzas, smoothies..."
+          autocomplete="off"
+        />
+      </div>
+      <div class="control-group">
+        <label for="categoryFilter" class="control-label">Category</label>
+        <select id="categoryFilter" class="control-input">
+          <option value="all">All categories</option>
+          <% (categories || []).forEach(function(category) { %>
+          <option value="<%= category %>"><%= category %></option>
+          <% }); %>
+        </select>
+      </div>
+      <div class="control-group">
+        <label for="outletFilter" class="control-label">Outlet</label>
+        <select id="outletFilter" class="control-input">
+          <option value="all">All outlets</option>
+        </select>
+      </div>
+      <div class="control-group">
+        <label for="sortBy" class="control-label">Sort by</label>
+        <select id="sortBy" class="control-input">
+          <option value="popular">Most popular</option>
+          <option value="priceLow">Price: Low to High</option>
+          <option value="priceHigh">Price: High to Low</option>
+          <option value="rating">Highest Rated</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="menu-section">
+  <div class="container">
+    <div class="menu-results-header">
+      <div>
+        <h2 class="section-title">Menu Items</h2>
+        <p class="section-description">
+          Add items straight to your cart or filter by outlet to plan your next visit.
+        </p>
+      </div>
+      <div class="result-count">
+        <span id="menuCount">0 items</span>
+      </div>
+    </div>
+    <div id="menuGrid" class="menu-grid" aria-live="polite"></div>
+    <template id="menuCardTemplate">
+      <article class="food-card">
+        <div class="food-image-wrapper">
+          <img src="" alt="" class="food-img" loading="lazy" />
+          <span class="food-tag"></span>
+        </div>
+        <div class="food-content">
+          <header class="food-header">
+            <h3 class="food-title"></h3>
+            <span class="food-price"></span>
+          </header>
+          <p class="food-description"></p>
+          <footer class="food-footer">
+            <div class="food-meta">
+              <span class="food-rating">⭐ 4.5</span>
+              <span class="food-outlet"></span>
+            </div>
+            <button class="add-to-cart">Add to Cart</button>
+          </footer>
+        </div>
+      </article>
+    </template>
+    <div id="menuEmptyState" class="empty-state" hidden>
+      <div class="empty-state-icon">🔍</div>
+      <h3>No items found</h3>
+      <p>Try adjusting your search or filter to discover more dishes.</p>
+    </div>
+  </div>
+</section>
+

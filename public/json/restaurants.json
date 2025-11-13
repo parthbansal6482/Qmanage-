@@ -4,6 +4,8 @@
       "id": "burger-singh",
       "name": "Burger Singh",
       "description": "Full of delicious",
+      "location": "Main Atrium, Ground Floor",
+      "timings": "09:00 AM - 11:00 PM",
       "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=120&h=120&fit=crop&crop=center",
       "banner": "https://images.unsplash.com/photo-1521017432531-fbd92d768814?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "promo": {
@@ -16,6 +18,8 @@
       "id": "sketch",
       "name": "Sketch",
       "description": "Full of delicious",
+      "location": "Innovation Block, Level 2",
+      "timings": "10:00 AM - 10:00 PM",
       "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=120&h=120&fit=crop&crop=center",
       "banner": "https://images.unsplash.com/photo-1521017432531-fbd92d768814?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "promo": {
@@ -28,6 +32,8 @@
       "id": "smoothie",
       "name": "Smoothie",
       "description": "Full of delicious",
+      "location": "Student Plaza, Courtyard",
+      "timings": "08:30 AM - 09:30 PM",
       "image": "https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=120&h=120&fit=crop&crop=center",
       "banner": "https://images.unsplash.com/photo-1521017432531-fbd92d768814?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "promo": {
@@ -40,6 +46,8 @@
       "id": "dominos",
       "name": "Domino's",
       "description": "Full of delicious",
+      "location": "North Wing, First Floor",
+      "timings": "09:00 AM - 11:30 PM",
       "image": "https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?w=120&h=120&fit=crop&crop=center",
       "banner": "https://images.unsplash.com/photo-1521017432531-fbd92d768814?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "promo": {
@@ -52,6 +60,8 @@
       "id": "cafe-coffee-day",
       "name": "Cafe Coffee Day",
       "description": "Full of delicious",
+      "location": "Library Arcade",
+      "timings": "07:30 AM - 10:00 PM",
       "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=120&h=120&fit=crop&crop=center",
       "banner": "https://images.unsplash.com/photo-1521017432531-fbd92d768814?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "promo": {
@@ -64,6 +74,8 @@
       "id": "kathi-junction",
       "name": "Kathi Junction",
       "description": "Full of delicious",
+      "location": "Sports Complex Foyer",
+      "timings": "10:00 AM - 11:00 PM",
       "image": "https://images.unsplash.com/photo-1544025162-d76694265947?w=120&h=120&fit=crop&crop=center",
       "banner": "https://images.unsplash.com/photo-1521017432531-fbd92d768814?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "promo": {
@@ -76,6 +88,8 @@
       "id": "maggi-point",
       "name": "Maggi Point",
       "description": "Full of delicious",
+      "location": "Residency Hall Courtyard",
+      "timings": "11:00 AM - 12:00 AM",
       "image": "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=120&h=120&fit=crop&crop=center",
       "banner": "https://images.unsplash.com/photo-1521017432531-fbd92d768814?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "promo": {

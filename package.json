@@ -1,0 +1,36 @@
+{
+  "name": "qmanage-",
+  "version": "1.0.0",
+  "description": "Full-stack Node.js + Express + MongoDB food ordering platform with EJS templates and admin console.",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js",
+    "seed": "node scripts/seed.js",
+    "lint": "echo \"No lint configured\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/parthbansal6482/Qmanage-.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/parthbansal6482/Qmanage-/issues"
+  },
+  "homepage": "https://github.com/parthbansal6482/Qmanage-#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "express-ejs-layouts": "^2.5.1",
+    "mongoose": "^8.19.3",
+    "morgan": "^1.10.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  }
+}

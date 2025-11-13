@@ -1,0 +1,35 @@
+<nav class="navigation">
+  <a
+    href="/"
+    class="nav-link <%= currentPath === '/' ? 'active' : '' %>"
+    >Home</a
+  >
+  <a
+    href="/menu"
+    class="nav-link <%= currentPath.startsWith('/menu') ? 'active' : '' %>"
+    >Menu</a
+  >
+  <a
+    href="/outlets"
+    class="nav-link <%= currentPath.startsWith('/outlets') ? 'active' : '' %>"
+    >Outlets</a
+  >
+  <div class="dropdown">
+    <span class="dropdown-toggle">Cafe's</span>
+    <div class="dropdown-content">
+      <a href="/orders?outlet=Burger%20Singh">Burger Singh</a>
+      <a href="/orders?outlet=Sketch">Sketch</a>
+      <a href="/orders?outlet=Smoothie">Smoothie</a>
+      <a href="/orders?outlet=Domino's">Domino's</a>
+      <a href="/orders?outlet=Cafe%20Coffee%20Day">Cafe Coffee Day</a>
+      <a href="/orders?outlet=Kathi%20Junction">Kathi Junction</a>
+      <a href="/orders?outlet=Maggi%20Point">Maggi Point</a>
+    </div>
+  </div>
+  <a
+    href="/contact"
+    class="nav-link <%= currentPath.startsWith('/contact') ? 'active' : '' %>"
+    >Contact</a
+  >
+</nav>
+

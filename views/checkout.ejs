@@ -1,0 +1,79 @@
+<section class="page-hero">
+  <div class="container">
+    <h1 class="page-title">Checkout</h1>
+    <p class="page-subtitle">
+      Please provide your details to complete your order.
+    </p>
+  </div>
+</section>
+
+<section class="checkout-page">
+  <div class="container">
+    <div class="checkout-layout">
+      <div class="checkout-form-panel">
+        <form id="checkoutForm">
+          <div class="form-section">
+            <h2>Customer Information</h2>
+            <div id="outletSelectorGroup" class="form-group" style="display: none;">
+              <label for="checkoutOutletSelect">Select Outlet *</label>
+              <select id="checkoutOutletSelect" class="control-input" required>
+                <option value="">Please select an outlet</option>
+              </select>
+              <p class="form-help-text">Please select the outlet where you'd like to place your order.</p>
+            </div>
+            <div class="form-group">
+              <label for="customerName">Full Name *</label>
+              <input type="text" id="customerName" class="control-input" required>
+            </div>
+            <div class="form-group">
+              <label for="customerEmail">Email *</label>
+              <input type="email" id="customerEmail" class="control-input" required>
+            </div>
+            <div class="form-group">
+              <label for="customerPhone">Phone *</label>
+              <input type="tel" id="customerPhone" class="control-input" required>
+            </div>
+            <div class="form-group">
+              <label for="orderNotes">Special Instructions (Optional)</label>
+              <textarea id="orderNotes" class="control-input" rows="3" placeholder="Any special requests or notes..."></textarea>
+            </div>
+          </div>
+          <div class="form-actions">
+            <a href="/cart" class="btn-outline">Back to Cart</a>
+            <button type="submit" class="btn-primary" id="submitOrderBtn">Place Order</button>
+          </div>
+        </form>
+      </div>
+      <aside class="checkout-summary">
+        <h2>Order Summary</h2>
+        <div id="checkoutItemsList" class="checkout-items-list"></div>
+        <div class="summary-section">
+          <div class="summary-row">
+            <span>Subtotal</span>
+            <span id="checkoutSubtotal">₹0.00</span>
+          </div>
+          <div class="summary-row">
+            <span>Taxes & Fees</span>
+            <span id="checkoutFees">₹0.00</span>
+          </div>
+          <div class="summary-row total">
+            <span>Total</span>
+            <span id="checkoutTotal">₹0.00</span>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<div id="checkoutEmptyState" class="empty-state" hidden>
+  <div class="empty-state-icon">🛒</div>
+  <h3>Your cart is empty</h3>
+  <p>Add items to your cart before checkout.</p>
+  <a href="/order" class="btn-primary">Browse Menu</a>
+</div>
+
+<script>
+  window.__OUTLETS__ = <%- JSON.stringify(outlets || []) %>;
+</script>
+

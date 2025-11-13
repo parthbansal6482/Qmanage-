@@ -1,0 +1,86 @@
+<section class="admin-hero">
+  <div class="container">
+    <div class="admin-hero-content">
+      <div>
+        <h1 class="page-title">Admin Dashboard</h1>
+        <p class="page-subtitle">
+          Monitor outlets, menu items, and live orders from a single control panel.
+        </p>
+      </div>
+      <div class="admin-actions">
+        <a href="/admin/outlets" class="btn-outline">Manage Outlets</a>
+        <a href="/admin/menu-items" class="btn-outline">Manage Menu Items</a>
+        <a href="/admin/orders" class="btn-primary">View Orders</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="admin-stats">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-card">
+        <span class="stat-label">Total Outlets</span>
+        <span class="stat-value" id="statTotalOutlets"><%= stats.totalOutlets %></span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label">Menu Items</span>
+        <span class="stat-value" id="statTotalMenuItems"><%= stats.totalMenuItems %></span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label">Pending Orders</span>
+        <span class="stat-value" id="statPendingOrders">0</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label">Completed Today</span>
+        <span class="stat-value" id="statCompletedOrders">0</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="admin-recent-orders">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Recent Orders</h2>
+      <a href="/admin/orders" class="link-muted">View all orders</a>
+    </div>
+    <table class="table" id="recentOrdersTable">
+      <thead>
+        <tr>
+          <th>Order ID</th>
+          <th>Customer</th>
+          <th>Outlet</th>
+          <th>Total</th>
+          <th>Status</th>
+          <th>Placed</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% (stats.recentOrders || []).forEach(function(order) { %>
+        <tr>
+          <td data-label="Order ID"><%= order._id %></td>
+          <td data-label="Customer"><%= order.customer?.name %></td>
+          <td data-label="Outlet"><%= order.outlet?.name || '—' %></td>
+          <td data-label="Total">₹<%= Number(order.totalAmount || 0).toFixed(2) %></td>
+          <td data-label="Status" class="status-cell">
+            <span class="status-badge status-<%= order.status %>"><%= order.status %></span>
+          </td>
+          <td data-label="Placed"><%= new Date(order.createdAt).toLocaleString() %></td>
+        </tr>
+        <% }); %>
+        <% if (!stats.recentOrders || stats.recentOrders.length === 0) { %>
+        <tr>
+          <td colspan="6">
+            <div class="empty-state-table">
+              <div class="empty-state-icon">📦</div>
+              <p>No orders have been placed yet. Encourage customers to try out the menu!</p>
+            </div>
+          </td>
+        </tr>
+        <% } %>
+      </tbody>
+    </table>
+  </div>
+</section>
+

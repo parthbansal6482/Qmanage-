@@ -40,7 +40,7 @@
       "id": "bs-5",
       "name": "Tacos",
       "price": 10.00,
-      "image": "img/373.png",
+      "image": "/img/373.png",
       "rating": 4.2,
       "description": "Fresh tacos",
       "featured": false

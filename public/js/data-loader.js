@@ -64,7 +64,7 @@ class DataLoader {
      * @returns {Promise} Promise that resolves with restaurants data
      */
     async loadRestaurants() {
-        return await this.loadJSON('data/restaurants.json');
+        return await this.loadJSON('/json/restaurants.json');
     }
 
     /**
@@ -72,7 +72,7 @@ class DataLoader {
      * @returns {Promise} Promise that resolves with menu items data
      */
     async loadMenuItems() {
-        return await this.loadJSON('data/menu-items.json');
+        return await this.loadJSON('/json/menu-items.json');
     }
 
     /**
@@ -80,7 +80,7 @@ class DataLoader {
      * @returns {Promise} Promise that resolves with best selling data
      */
     async loadBestSelling() {
-        return await this.loadJSON('data/best-selling.json');
+        return await this.loadJSON('/json/best-selling.json');
     }
 
     /**
@@ -88,7 +88,7 @@ class DataLoader {
      * @returns {Promise} Promise that resolves with featured products data
      */
     async loadFeaturedProducts() {
-        return await this.loadJSON('data/featured-products.json');
+        return await this.loadJSON('/json/featured-products.json');
     }
 
     /**

@@ -1,0 +1,86 @@
+<section class="page-hero">
+  <div class="container">
+    <h1 class="page-title">Campus Outlets</h1>
+    <p class="page-subtitle">
+      Browse all food partners, view timings, and plan your next visit.
+    </p>
+  </div>
+</section>
+
+<section class="outlet-controls">
+  <div class="container">
+    <div class="controls-grid">
+      <div class="control-group">
+        <label for="outletSearch" class="control-label">Search outlets</label>
+        <input
+          type="search"
+          id="outletSearch"
+          class="control-input"
+          placeholder="Search by name or location"
+        />
+      </div>
+      <div class="control-group">
+        <label for="outletSort" class="control-label">Sort by</label>
+        <select id="outletSort" class="control-input">
+          <option value="name">Alphabetical</option>
+          <option value="popular">Most popular</option>
+          <option value="recent">Recently added</option>
+        </select>
+      </div>
+      <div class="control-group">
+        <label class="control-label">Categories</label>
+        <div id="outletCategoryFilters" class="chip-group" role="group" aria-label="Category filters"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="outlet-section">
+  <div class="container">
+    <div class="outlet-grid" id="outletGrid"></div>
+    <template id="outletCardTemplate">
+      <article class="outlet-card">
+        <div class="outlet-visual">
+          <img src="" alt="" class="outlet-image" loading="lazy" />
+          <div class="outlet-badge">Open</div>
+        </div>
+        <div class="outlet-content">
+          <header class="outlet-header">
+            <h3 class="outlet-title"></h3>
+            <p class="outlet-description"></p>
+          </header>
+          <div class="outlet-meta">
+            <span class="outlet-location"></span>
+            <span class="outlet-timings"></span>
+          </div>
+          <div class="outlet-categories"></div>
+          <footer class="outlet-footer">
+            <button class="btn-outline outlet-view-menu">View Menu</button>
+            <button class="btn-primary outlet-more-info">More Info</button>
+          </footer>
+        </div>
+      </article>
+    </template>
+    <div id="outletEmptyState" class="empty-state" hidden>
+      <div class="empty-state-icon">🍽️</div>
+      <h3>No outlets match your filters</h3>
+      <p>Try clearing some filters or searching with a different keyword.</p>
+    </div>
+  </div>
+</section>
+
+<div class="modal" id="outletModal" hidden aria-hidden="true" role="dialog" aria-modal="true">
+  <div class="modal-overlay" data-dismiss="modal"></div>
+  <div class="modal-dialog" role="document">
+    <button class="modal-close" data-dismiss="modal">×</button>
+    <div class="modal-header">
+      <h2 id="outletModalTitle">Outlet Details</h2>
+    </div>
+    <div class="modal-body" id="outletModalBody"></div>
+    <div class="modal-footer">
+      <button class="btn-outline" data-dismiss="modal">Close</button>
+      <a href="#" id="outletModalMenuLink" class="btn-primary">Go to Menu</a>
+    </div>
+  </div>
+</div>
+

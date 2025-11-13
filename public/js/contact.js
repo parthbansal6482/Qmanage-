@@ -298,9 +298,8 @@ class NewsletterSubscription {
 
 // Initialize contact page functionality when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
-    // Only initialize contact page functionality if we're on the contact page
-    if (window.location.pathname.includes('contact.html')) {
+    if (document.body.classList.contains('page-contact')) {
         new ContactPage();
-        new NewsletterSubscription();
     }
+    new NewsletterSubscription();
 });

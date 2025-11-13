@@ -1,0 +1,83 @@
+<section class="order-hero">
+  <div class="container">
+    <div class="order-hero-grid">
+      <div class="order-hero-left">
+        <div class="order-hero-badge" id="orderHeroBadge">⚡ Deal of the Weekend</div>
+        <h1 class="order-hero-title" id="orderOutletName">Choose an outlet</h1>
+        <img
+          src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?q=80&w=1170&auto=format&fit=crop"
+          alt="Outlet banner"
+          class="order-hero-img"
+          id="orderOutletBanner"
+        />
+      </div>
+      <div class="order-hero-right">
+        <img
+          src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=600&h=400&fit=crop&crop=center"
+          alt="Signature dish"
+          class="promo-img"
+          id="orderPromoImage"
+        />
+        <div class="promo-card" id="orderPromoCard">
+          <div class="promo-off" id="orderPromoDiscount">50% off</div>
+          <div class="promo-sub" id="orderPromoText">Across featured items</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="order-select">
+  <div class="container">
+    <div class="order-select-grid">
+      <div class="select-group">
+        <label for="orderOutletSelect">Outlet</label>
+        <select id="orderOutletSelect" class="control-input">
+          <option value="">Select an outlet</option>
+          <% (outlets || []).forEach(function(outlet) { %>
+          <option value="<%= outlet.name || outlet._id %>"><%= outlet.name %></option>
+          <% }); %>
+        </select>
+      </div>
+      <div class="select-group">
+        <label for="orderCategorySelect">Category</label>
+        <select id="orderCategorySelect" class="control-input" disabled>
+          <option value="">Select a category</option>
+        </select>
+      </div>
+      <div class="select-group">
+        <label for="orderSearch">Search menu</label>
+        <input
+          type="search"
+          id="orderSearch"
+          class="control-input"
+          placeholder="Search for dishes, ingredients..."
+          disabled
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="order-categories" id="categoriesSection" hidden>
+  <div class="container">
+    <h2 class="order-section-title">Menu Categories</h2>
+    <div class="order-categories-row" id="categoryRow"></div>
+  </div>
+</section>
+
+<section class="order-items" id="itemsSection" hidden aria-live="polite">
+  <div class="container">
+    <div class="order-items-grid" id="itemsGrid"></div>
+    <div id="orderEmptyState" class="empty-state" hidden>
+      <div class="empty-state-icon">🍔</div>
+      <h3>No items found</h3>
+      <p>Try selecting a different category or searching for another dish.</p>
+    </div>
+  </div>
+</section>
+
+<script>
+  window.__OUTLETS__ = <%- JSON.stringify(outlets || []) %>;
+</script>
+
